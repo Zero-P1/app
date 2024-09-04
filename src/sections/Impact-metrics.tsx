@@ -11,15 +11,15 @@ export function ImpactMetrics() {
           <h3 className="font-semibold text-zinc-50 text-2xl md:text-3xl text-center">+600 mil veículos
             regularizados
           </h3>
-          <p className="text-zinc-200 text-center">Com as soluções Zapay, mais pessoas regularizaram seus veículos em menos tempo e com mais alívio no bolso.</p>
+          <p className="text-zinc-200 text-center">Com as soluções Zero Pontos, mais pessoas regularizaram seus veículos em menos tempo e com mais alívio no bolso.</p>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4">
           <h3 className="font-semibold text-zinc-50 text-2xl md:text-3xl text-center">Presença em todos os
-            DETRAN’s
+            estados
           </h3>
 
-          <p className="text-zinc-200 text-center">Somos uma empresa credenciada pelo SENATRAN e possuímos a maior cobertura nacional de consultas de veículos.</p>
+          <p className="text-zinc-200 text-center">Somos uma empresa credenciada e possuímos a maior cobertura nacional de consultas de veículos.</p>
         </div>
       </div>
     </section>

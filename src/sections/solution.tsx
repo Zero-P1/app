@@ -9,7 +9,7 @@ export function Solution() {
         </h2>
 
         <p className="text-sm md:text-lg text-center text-neutral-500 max-w-[800px] mx-auto">
-          Somos a solução para você se livrar das multas, além de pagar IPVA e licenciamento, garantindo aquele alívio não só no seu tempo, mas também no seu bolso.
+          Somos a solução para você se livrar das multas, garantindo aquele alívio não só no seu tempo, mas também no seu bolso.
         </p>
 
         <FeatureList />

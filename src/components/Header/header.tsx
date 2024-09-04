@@ -1,62 +1,32 @@
-import { useState } from 'react';
-import { Check } from "../../assets/check";
-import { Person } from "../../assets/person";
+interface ModalProps {
+  isModalOpen: boolean;
+  onClose: () => void;
+}
 
-export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+export function Modal({ isModalOpen, onClose }: ModalProps) {
+  if (!isModalOpen) return null;
 
   return (
-    <header className="bg-primary h-20 flex items-center justify-center py-4 px-6 relative">
-      <div className="max-w-7xl w-full h-12 flex items-center justify-between">
-        <h2 className="text-zinc-50 font-semibold text-3xl">Logo</h2>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+      <div className="bg-white rounded-lg p-6 max-w-sm w-full">
+        <h2 className="text-xl font-semibold mb-4">
+          Aproveite agora a oferta especial para limpar sua CNH!
+        </h2>
+        <p className="mb-4">
+          Essa oferta é válida por apenas 10 minutos. 
+          Para garantir o melhor preço, finalize a compra 
+          diretamente pelo botão abaixo. Se precisar de ajuda, nossos assessores 
+          estão disponíveis pelo WhatsApp, mas os valores podem ser maiores.
+        </p>
 
-        {/* Botão do Menu Hambúrguer */}
+        <p className="mb-4 text-xs">Clique no botão abaixo para aproveitar a oferta com segurança!</p>
         <button
-          className="block md:hidden text-zinc-50 focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={onClose}
+          className="bg-primary w-full text-white px-4 py-2 rounded-md"
         >
-          {menuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
+          Fechar
         </button>
-
-        {/* Navegação */}
-        <nav className={`md:flex items-center gap-5 pr-3 ${menuOpen ? 'block pt-4' : 'hidden'} px-6 absolute md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-primary md:bg-transparent`}>
-          <ul className={`flex flex-col md:flex-row ${menuOpen ? 'items-start' : 'items-center'}  gap-5`}>
-            <li>
-              <a href="#home" className="text-lg text-zinc-50 underline font-medium">Inicio</a>
-            </li>
-            <li>
-              <a href="#metrics" className="text-lg text-zinc-50 underline font-medium">Resultados</a>
-            </li>
-            <li>
-              <a href="#client" className="text-lg text-zinc-50 underline font-medium">Clientes</a>
-            </li>
-            <li>
-              <a href="#faq" className="text-lg text-zinc-50 underline font-medium">FAQ</a>
-            </li>
-          </ul>
-
-          <div className={`h-full flex items-center flex-wrap ${menuOpen ? 'pb-4 gap-1' : 'gap-4'}`}>
-            <button className="h-[48px] px-5 flex items-center justify-center text-base text-zinc-50 gap-1 border border-primary-100 rounded-full mt-4 md:mt-0">
-              <span className="mb-1">Acompanhar pedidos</span>
-              <Check />
-            </button>
-
-            {/* Botão "Entrar" dentro do menu hambúrguer */}
-            <button className="h-[48px] px-5 flex items-center justify-center text-base font-bold bg-purple-200 hover:bg-purple-300 text-purple-700 gap-1 border border-primary-100 rounded-full mt-4 md:mt-0">
-              <span className="mb-1">Entrar</span>
-              <Person />
-            </button>
-          </div>
-        </nav>
       </div>
-    </header>
+    </div>
   );
 }

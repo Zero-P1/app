@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ArrowRight } from "../assets/arrow-right";
 import { Modal } from "../components/Modal/modal";
 
+import ilustrativo from "../assets/ilustrativo.jpg"
+
 export function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,33 +26,33 @@ export function Home() {
 
             <p className="text-sm lg:text-lg text-neutral-500 pb-4">
               Puxar e <strong>Consultar sua placa Grátis no Zero Pontos</strong> {" "}
-              nunca foi tão fácil, resolva tudo <b>sem filas, burocracia</b>
+              nunca foi tão fácil, resolva tudo <b>sem filas, burocracia</b> {" "}
               parcelando <b>em até 12x!</b>
             </p>
 
             <div className="flex flex-col gap-2 border border-solid bg-mono-white border-neutral-200 rounded-3xl w-full p-6">
               <input
-                type="phone"
-                id="phone"
+                type="number"
+                id="cpf"
                 className="h-12 w-full input-lg rounded-md border border-gray-300 bg-gray-50 px-4 mb-2 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary"
-                placeholder="Seu telefone"
-                name="phone"
+                placeholder="Digite seu CPF"
+                name="cpf"
               />
 
               <input
-                type="text"
-                id="licensePlate"
-                className="h-12 w-full input-lg rounded-md border border-gray-300 bg-gray-50 px-4 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary uppercase placeholder:normal-case"
-                placeholder="Placa do veículo"
-                name="licensePlate"
+                type="number"
+                id="number-registry"
+                className="h-12 w-full input-lg rounded-md border border-gray-300 bg-gray-50 px-4 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary placeholder:normal-case"
+                placeholder="N° de Registro"
+                name="number-registry"
               />
 
               <select
                 name=""
                 id=""
-                className="h-12 w-full input-lg rounded-md border border-gray-300 bg-gray-50 px-4 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary"
+                className="h-12 my-2 w-full input-lg rounded-md border border-gray-300 bg-gray-50 px-4 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary"
               >
-                <option value="" disabled>Selecione quantos pontos tem sua CNH</option>
+                <option value="">Selecione quantos pontos tem sua CNH</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
@@ -131,9 +133,9 @@ export function Home() {
           {/* Imagem que vai para baixo em telas menores */}
           <div className="mt-4 pb-3 lg:mt-0 lg:ml-6">
             <img
-              src="https://www.usezapay.com.br/_next/image?url=https%3A%2F%2Freassuring-nurture-26b1b2700a.media.strapiapp.com%2FAGORAEAGORA_BG_SP_6938cd570a.png&w=640&q=75"
+              src={ilustrativo}
               alt="Imagem de fundo"
-              className=""
+              className="w-[600px] rounded-xl"
             />
           </div>
         </div>

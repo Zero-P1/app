@@ -3,12 +3,12 @@ import { FAQItem } from "../components/FAQItem/faq-item";
 
 const faqData = [
   {
-    question: "É seguro pagar com a Zapay?",
-    answer: "O site da Zapay segue todos os protocolos de segurança recomendados, possui criptografia e não armazena dados referentes ao cartão de crédito do cliente, pois possui o Certificado PCI, que permite fazer o manuseio dos dados sensíveis sem ter receio de perdas ou vazamentos.",
+    question: "É seguro pagar com a Zero Pontos?",
+    answer: "O site do Zero Pontos segue todos os protocolos de segurança recomendados, possui criptografia e não armazena dados referentes ao cartão de crédito do cliente, pois possui o Certificado PCI, que permite fazer o manuseio dos dados sensíveis sem ter receio de perdas ou vazamentos.",
   },
   {
-    question: "Quanto tempo leva para meus débitos saírem do sistema do DETRAN?",
-    answer: "Após a aprovação do pedido, os débitos irão ser liquidados junto à rede bancária. Depois desse processo, o DETRAN solicita até 2 dias úteis para que os débitos sejam baixados no sistema. Vale lembrar que, alguns débitos podem quitar mais rápido e outros podem demorar um pouco mais, como no caso de dívida ativa ou de débitos que forem de órgãos diferentes.",
+    question: "Quanto tempo leva para meus débitos saírem do sistema?",
+    answer: "Após a aprovação do pedido, os débitos irão ser liquidados junto à rede bancária. Depois desse processo, solicitamos até 2 dias úteis para que os débitos sejam baixados no sistema. Vale lembrar que, alguns débitos podem quitar mais rápido e outros podem demorar um pouco mais, como no caso de dívida ativa ou de débitos que forem de órgãos diferentes.",
   },
   {
     question: "Como acessar meus comprovantes?",
