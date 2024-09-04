@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* styles/globals.css ou outro arquivo CSS */
+@media (min-width: 1440px) {
+  .lg-calc {
+    height: calc(100vh - 80px);
+  }
+}
